@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('contacts', 'ContactController');
+
+Route::post('/post-contact', 'ContactController@postContact');
+Route::get('/get-contact', 'ContactController@getContact');
