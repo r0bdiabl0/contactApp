@@ -21,17 +21,17 @@
                     {{ $contact->address }}<br>
                     {{ $contact->city }}, {{ $contact->state }} {{ $contact->postal_code }}<br>
                     <abbr title="Phone">{{ ucfirst($contact->phone_number_1_type) }}
-                        :</abbr> {{ $contact->phone_number_1 }}
+                        :</abbr> {{ $contact->phone_number_1 }}<br>
                     @if (!empty($contact->phone_number_2))
                         <abbr title="Phone">{{ ucfirst($contact->phone_number_2_type) }}
-                            :</abbr> {{ $contact->phone_number_2 }}
+                            :</abbr> {{ $contact->phone_number_2 }}<br>
                     @endif
                     @if (!empty($contact->phone_number_3))
                         <abbr title="Phone">{{ ucfirst($contact->phone_number_3_type) }}
-                            :</abbr> {{ $contact->phone_number_3 }}
+                            :</abbr> {{ $contact->phone_number_3 }}<br>
                     @endif
                     @if (!empty($contact->email_address))
-                        <a href="mailto:#">{{ $contact->email_address }}</a>
+                        <abbr title="Email">Email:</abbr> <a href="mailto:#">{{ $contact->email_address }}</a>
                     @endif
                 </address>
                 <hr>
