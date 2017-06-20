@@ -23,39 +23,39 @@
                     <div class="row">
                         <div class="col-md-6">
                             {!! Form::label('contact_type', 'Contact Type:', ['class' => 'control-label']) !!}
-                            {!! Form::select('contact_type', ['lead' => 'Lead', 'friend' => 'Friend', 'family' => 'Family'], Input::old('contact_type'), ['id' => 'contact_type', 'class' => 'form-control']) !!}
+                            {!! Form::select('contact_type', ['lead' => 'Lead', 'friend' => 'Friend', 'family' => 'Family'], old('contact_type'), ['id' => 'contact_type', 'class' => 'form-control']) !!}
                         </div>
                         <div class="col-md-6">
-                            <label for="contact_type_additional_info" class="form-control"
+                            <label for="contact_type_additional_info" class="control-label"
                                    id="contact_type_additional_info"></label>
-                            {!! Form::text('contact_type_additional_info', Input::old('contact_type_additional_info'), ['class' => 'form-control']) !!}
+                            {!! Form::text('contact_type_additional_info', old('contact_type_additional_info'), ['class' => 'form-control']) !!}
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('name', 'Name:', ['class' => 'control-label']) !!}
-                    {!! Form::text('name', Input::old('name'), ['class' => 'form-control']) !!}
+                    {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('email_address', 'Email Address:', ['class' => 'control-label']) !!}
-                    {!! Form::text('email_address', Input::old('email_address'), ['class' => 'form-control']) !!}
+                    {!! Form::text('email_address', old('email_address'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('address', 'Address:', ['class' => 'control-label']) !!}
-                    {!! Form::text('address', Input::old('address'), ['class' => 'form-control']) !!}
+                    {!! Form::text('address', old('address'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('city', 'City:', ['class' => 'control-label']) !!}
-                    {!! Form::text('city', Input::old('city'), ['class' => 'form-control']) !!}
+                    {!! Form::text('city', old('city'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('address', 'Address:', ['class' => 'control-label']) !!}
-                    {!! Form::text('address', Input::old('address'), ['class' => 'form-control']) !!}
+                    {!! Form::text('address', old('address'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
@@ -113,25 +113,25 @@
                     'WI'=>'Wisconsin',
                     'WY'=>'Wyoming',
                     ],
-                    Input::old('state'),
+                    old('state'),
                     ['class' => 'form-control' ]) !!}
 
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('postal_code', 'Postal Code:', ['class' => 'control-label']) !!}
-                    {!! Form::text('postal_code', Input::old('postal_code'), ['class' => 'form-control']) !!}
+                    {!! Form::text('postal_code', old('postal_code'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-6">
                             {!! Form::label('phone_number_1', 'Phone Number 1:', ['class' => 'control-label']) !!}
-                            {!! Form::text('phone_number_1', Input::old('phone_number_1'), ['class' => 'form-control']) !!}
+                            {!! Form::text('phone_number_1', old('phone_number_1'), ['class' => 'form-control']) !!}
                         </div>
                         <div class="col-md-6">
                             {!! Form::label('phone_number_1_type', 'Type:', ['class' => 'control-label']) !!}
-                            {!! Form::select('phone_number_1_type', ['mobile' => 'Mobile', 'home' => 'Home', 'office' => 'Office'], Input::old('phone_number_1_type'), ['class' => 'form-control']) !!}
+                            {!! Form::select('phone_number_1_type', ['mobile' => 'Mobile', 'home' => 'Home', 'office' => 'Office'], old('phone_number_1_type'), ['class' => 'form-control']) !!}
                         </div>
                     </div>
                 </div>
@@ -140,11 +140,11 @@
                     <div class="row">
                         <div class="col-md-6">
                             {!! Form::label('phone_number_2', 'Phone Number 2:', ['class' => 'control-label']) !!}
-                            {!! Form::text('phone_number_2', Input::old('phone_number_2'), ['class' => 'form-control']) !!}
+                            {!! Form::text('phone_number_2', old('phone_number_2'), ['class' => 'form-control']) !!}
                         </div>
                         <div class="col-md-6">
                             {!! Form::label('phone_number_2_type', 'Type:', ['class' => 'control-label']) !!}
-                            {!! Form::select('phone_number_2_type', ['mobile' => 'Mobile', 'home' => 'Home', 'office' => 'Office'], Input::old('phone_number_2_type'), ['class' => 'form-control']) !!}
+                            {!! Form::select('phone_number_2_type', ['mobile' => 'Mobile', 'home' => 'Home', 'office' => 'Office'], old('phone_number_2_type'), ['class' => 'form-control']) !!}
                         </div>
                     </div>
                 </div>
@@ -153,11 +153,11 @@
                     <div class="row">
                         <div class="col-md-6">
                             {!! Form::label('phone_number_3', 'Phone Number 3:', ['class' => 'control-label']) !!}
-                            {!! Form::text('phone_number_3', Input::old('phone_number_3'), ['class' => 'form-control']) !!}
+                            {!! Form::text('phone_number_3', old('phone_number_3'), ['class' => 'form-control']) !!}
                         </div>
                         <div class="col-md-6">
                             {!! Form::label('phone_number_3_type', 'Type:', ['class' => 'control-label']) !!}
-                            {!! Form::select('phone_number_3_type', ['mobile' => 'Mobile', 'home' => 'Home', 'office' => 'Office'], Input::old('phone_number_3_type'), ['class' => 'form-control']) !!}
+                            {!! Form::select('phone_number_3_type', ['mobile' => 'Mobile', 'home' => 'Home', 'office' => 'Office'], old('phone_number_3_type'), ['class' => 'form-control']) !!}
                         </div>
                     </div>
                 </div>

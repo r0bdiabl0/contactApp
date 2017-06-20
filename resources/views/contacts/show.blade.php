@@ -30,7 +30,7 @@
                         <abbr title="Phone">{{ ucfirst($contact->phone_number_3_type) }}
                             :</abbr> {{ $contact->phone_number_3 }}
                     @endif
-                    @if (!empty($contact->email))
+                    @if (!empty($contact->email_address))
                         <a href="mailto:#">{{ $contact->email_address }}</a>
                     @endif
                 </address>

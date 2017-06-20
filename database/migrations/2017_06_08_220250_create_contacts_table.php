@@ -27,7 +27,7 @@ class CreateContactsTable extends Migration
             $table->string('phone_number_2_type')->nullable();;
             $table->string('phone_number_3')->nullable();
             $table->string('phone_number_3_type')->nullable();;
-            $table->integer('contact_type');
+            $table->string('contact_type');
             $table->string('contact_type_additional_info')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

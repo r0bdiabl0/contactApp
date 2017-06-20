@@ -21,11 +21,19 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         $contact_type = $request->get('contact_type');
-        $search = '%' . $request->get('search') . '%';
-        if (!empty($search) || !empty($contact_type)) {
-            $contacts = Contact::where('contact_type', $contact_type)->where(function ($query) use ($search) {
-                $query->where('name', 'like', $search)->orWhere('email', 'like', $search);
-            })->get();
+
+        if (!empty($request->get('search')) || !empty($contact_type)) {
+            $search = '%' . $request->get('search') . '%';
+            if (empty($contact_type)) {
+                $contacts = Contact::where(function ($query) use ($search) {
+                    $query->where('name', 'like', $search)->orWhere('email', 'like', $search);
+                })->get();
+            } else {
+                $contacts = Contact::where('contact_type', $contact_type)->where(function ($query) use ($search) {
+                    $query->where('name', 'like', $search)->orWhere('email', 'like', $search);
+                })->get();
+            }
+
         } else {
             $contacts = Contact::all();
         }

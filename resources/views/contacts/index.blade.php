@@ -14,6 +14,7 @@
                     <div class="form-group">
                         <label for="contact_type">Contact Type</label>
                         <select name="contact_type" id="contact_type" class="form-control">
+                            <option>Select...</option>
                             <option value="lead">Lead</option>
                             <option value="friend">Friend</option>
                             <option vale="family">Family</option>
