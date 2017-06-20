@@ -173,16 +173,7 @@
 @section('scripts')
     <script>
         $(function () {
-            $(window).bind("load", function () {
-                var contact_type = $('#contact_type').val();
-                if (contact_type == 'lead') {
-                    $('#contact_type_additional_info').html('Lead Score');
-                } else if (contact_type == 'friend') {
-                    $('#contact_type_additional_info').html('Years Known');
-                } else {
-                    $('#contact_type_additional_info').html('Relationship Type');
-                }
-            });
+
             $('#contact_type').change(function () {
                 var contact_type = $('#contact_type').val();
                 if (contact_type == 'lead') {
@@ -193,6 +184,16 @@
                     $('#contact_type_additional_info').html('Relationship Type');
                 }
             });
+        });
+        $(window).bind("load", function () {
+            var contact_type = $('#contact_type').val();
+            if (contact_type == 'lead') {
+                $('#contact_type_additional_info').html('Lead Score');
+            } else if (contact_type == 'friend') {
+                $('#contact_type_additional_info').html('Years Known');
+            } else {
+                $('#contact_type_additional_info').html('Relationship Type');
+            }
         });
     </script>
 @stop
